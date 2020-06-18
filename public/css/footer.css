@@ -1,0 +1,100 @@
+
+#footer{ 
+	padding: 60px 0 60px;
+	position: relative;
+	background: #071831;
+	color: #FFF;
+}
+#footer .box_title{ 
+	text-transform: uppercase;
+	margin-bottom: 30px;
+	padding-top: 10px;
+}
+#footer .wrap{
+	margin: 0 -15px;
+}
+#footer .col{ 
+	float: left;
+	padding: 0 15px;
+	font-size: 14px;
+}
+#footer .col-1 .logo{ 
+	margin-bottom: 18px;
+}
+#footer .col-1 .slogan{ 
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+	position: relative;
+}
+#footer .col-1 .slogan:before{
+	position: absolute;
+	content: "";
+	width: 70px;
+	height: 5px;
+	background: #fff;
+	bottom: 0;
+	left: 0;
+}
+#footer .col-1 .address{ 
+	font-size: 13px;
+	margin-bottom: 2px;
+}
+#footer .col-1 .address .fa{ 
+	width: 16px;
+}
+#footer .col-1 .hotline{ 
+	font-size: 13px;
+	margin-bottom: 15px;
+}
+#footer .col-1 .hotline .fa{ 
+	width: 16px;
+}
+#footer .col-1 .social {
+	padding-top: 10px;
+}
+#footer .col-1 .social a{ 
+	display: inline-block;
+	margin-right: 5px;
+}
+#footer .col-4 .input-group .form-control{ 
+	border: 0;
+	border-radius: 0;
+}
+#footer .col-4 .langtech .title{
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 500;
+	padding: 20px 0;
+}
+#footer .col-4 .input-group .input-group-addon{ 
+	border: 0;
+	border-radius: 0;
+	background-color: #d3a23b;
+	color: #FFF;
+	cursor: pointer;
+	transition: background-color 0.15s ease-in-out 0s, color 0.15s ease-in-out 0s;
+}
+#footer .col-4 .input-group .input-group-addon:HOVER{ 
+	background-color: #C9353D;
+}
+#footer a{ 
+	color: #FFF;
+}
+#footer a:HOVER{ 
+	color: #d3a23b;
+}
+#footer .box_menuFooter ul{
+	list-style: none;
+}
+#footer .box_menuFooter ul li{
+	padding: 5px;
+	display: inline-block;
+}
+/* Responsive */
+@media all and (max-width: 768px){
+	#footer .col{ 
+		width: auto;
+		float: none;
+		margin-bottom: 40px;
+	}
+}

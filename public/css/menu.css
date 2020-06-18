@@ -1,0 +1,253 @@
+/* Menu */
+#menu { 
+	background-color: #FFF;
+	position: relative;
+	z-index: 99999;
+	}
+#menu .row{ 
+	margin: 0;
+}
+#menu .menu{ 
+	padding: 0;
+}
+#menu .menu:AFTER{ 
+	content: "";
+	display: block;	
+	clear: both;
+}
+#menu .menu>ul{ 
+	padding: 0;
+ 	list-style: none;
+ 	margin: 0;
+ 	float: right;
+}
+#menu .menu>ul>li{ 
+	display: inline-block;
+ 	position: relative;
+ 	margin: 0 0px 0 15px;
+}
+#menu .menu>ul>li>a{ 
+	display: block;
+ 	font-size: 13px;
+ 	color: #0f2a51;
+ 	font-weight: 700;
+ 	line-height: 100%;
+ 	height: 100px;
+ 	line-height: 94px;
+ 	text-transform: uppercase;
+}
+#menu .menu>ul>li>ul{ 
+	display: none;
+ 	position: absolute;
+ 	top: 100%;
+ 	left: 0;
+ 	padding: 10px 0;
+ 	list-style: none;
+ 	margin: 0;
+ 	min-width: 180px;
+ 	z-index: 999;
+ 	background-color: #FFF;
+ 	-webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+ 	box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+}
+#menu .menu>ul>li>ul>li{ 
+	border-bottom: solid 1px #f5f5f5;
+}
+#menu .menu>ul>li>ul>li:LAST-CHILD{ 
+	border: 0;
+}
+#menu .menu>ul>li>ul>li>a{ 
+	color: #555;
+ 	font-size: 13px;
+ 	padding: 10px 15px;
+ 	display: block;
+ 	-moz-transition: none;
+ 	-webkit-transition: none;
+ 	-o-transition: none;
+ 	transition: none;
+ 	border: none !important;
+}
+#menu .menu>ul>li:FIRST-CHILD>a{ 
+	border: 0;
+}
+#menu .menu>ul>li:LAST-CHILD{ 
+	margin-right: 0;
+}
+#menu .menu>ul>li:hover>a, #menu .menu>ul>li>a.active{ 
+	border-bottom: 3px solid #d2a23a;
+}
+#menu .menu>ul>li:hover>ul{ 
+	display: block;
+	z-index: 999999;
+}
+#menu .menu>ul>li>ul>li>ul{
+ 	display: none;
+ 	position: absolute;
+ 	top: 0;
+ 	left: 100%;
+ 	z-index: 999;
+ 	background-color: #FFF;
+ 	list-style: none;
+ 	margin: 0;
+ 	padding: 0;
+ 	min-width: 250px;
+ 	-webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+ 	box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+}
+#menu .menu>ul>li>ul>li>ul>li{ 
+	border-bottom: solid 1px #f5f5f5;
+}
+#menu .menu>ul>li>ul>li>ul>li>a{ 
+	color: #555;
+ 	font-size: 13px;
+ 	padding: 10px 20px;
+ 	display: block;
+ 	text-transform: inherit;
+ 	-moz-transition: none;
+ 	-webkit-transition: none;
+	-o-transition: none;
+ 	transition: none;
+ 	border: none !important;
+}
+#menu .menu>ul>li>ul>li>ul>li:hover>a{ 
+	background: #d3a23b;
+ 	color: #000;
+}
+#menu .menu>ul>li>ul>li:hover>a{ 
+	background: #d3a23b;
+ 	color: #000;
+}
+#menu .menu>ul>li>ul>li:hover>ul{ 
+	display: block;
+ 	z-index: 999999;
+}
+#menu .menu>ul>li>ul>li.dropdown:BEFORE{ 
+	position: absolute;
+ 	top: 8px;
+ 	right: 10px;
+ 	content: "\f105";
+ 	font-family: "FontAwesome";
+ 	font-size: 16px;
+}
+#menu .menu>ul>li:LAST-CHILD>ul{ 
+	left: auto;
+ 	right: 0;
+}
+#menu .menu>ul>li:LAST-CHILD>a>span{ 
+	display: inline-block;
+ 	background-color: #d2a23a;
+ 	color: #FFF;
+ 	line-height: normal;
+ 	padding: 10px 10px;
+}
+#menu .menu>ul>li:LAST-CHILD:HOVER>a{ 
+	border: 0;
+}
+#menu .menu>ul>li:nth-last-child(-n+2)>ul{ 
+	left: auto;
+ 	right: 0;
+}
+#menu .header{ 
+	float: left;
+}
+#menu .header .logo{ 
+	display: inline-block;
+ 	margin-top: 22px;
+}
+#menu .header .logo img{ 
+	max-height: 58px;
+}
+#menu .language{ 
+	width: 100px;
+ 	float: right;
+ 	text-align: right;
+ 	padding-top: 18px;
+}
+
+.box_menuMobile{ 
+	position: fixed;
+ 	top: 0;
+ 	left: 0;
+ 	width: 70%;
+ 	height: 100%;
+ 	background-color: #FFF;
+ 	overflow: auto;
+ 	z-index: 99999;
+ }
+.box_menuMobile ul{ 
+	margin: 0;
+ 	padding: 10px 0;
+ 	list-style: none;
+}
+.box_menuMobile ul li a{ 
+	display: block;
+ 	padding: 8px 10px;
+ 	font-weight: bold;
+}
+.box_menuMobile ul li ul{ 
+	margin-left: 20px;
+ 	padding: 0 0 10px;
+}
+.box_menuMobile ul li ul li a{ 
+	font-weight: normal;
+}
+.bg_menu_mobile{ 
+	position: fixed;
+ 	top: 0;
+ 	left: 0;
+ 	width: 100%;
+ 	height: 100%;
+ 	background-color: rgba(0, 0, 0, 0.7);
+ 	z-index: 99998;
+}
+/* Responsive */
+@media all and (max-width: 768px){
+	#menu{
+		padding: 0;
+	 	position: relative;
+	 	height: 50px;
+	 	border: 0;
+	}
+	#menu .header .logo{ 
+		position: absolute;
+	 	top: 5px;
+	 	left: 15px;
+	 	margin: 0;
+	}
+	#menu .header .logo img{ 
+		height: 40px;
+	}
+	#menu .toggle{ 
+		position: absolute;
+	 	top: 16px;
+	 	right: 15px;
+	 	color: #222;
+	 	width: 24px;
+	}
+	#menu .toggle .line{ 
+		display: block;
+	 	height: 2px;
+	 	margin-bottom: 4px;
+	 	border-radius: 1px;
+		background-color: #999;
+	}
+	#menu .hotline{
+		position: absolute;
+	 	top: 5px;
+	 	right: 15px;
+	 	width: auto;
+	}
+	#menu .hotline a{ 
+		color: #FFF;
+	}
+	#menu .hotline .phone{ 
+		display: none;
+	}
+	#menu .hotline .btn_dangky{ 
+		margin: 0;
+	 	padding: 0;
+	}
+	#menu .hotline .btn_dangky img{ 
+		height: 30px;
+	}
+}

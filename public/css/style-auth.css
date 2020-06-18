@@ -1,0 +1,27 @@
+/* Default */
+body{ 
+	color: #111111; 
+	transition: all 0.3s;
+}
+img{
+	max-width: 100%;
+}
+a { 
+	text-decoration: none; 
+	color: #0f2a51; 
+	transition: background-color 0.15s ease-in-out 0s, color 0.15s ease-in-out 0s;
+}
+a:HOVER { 
+	text-decoration: none; 
+	color: #d3a23b;
+}
+a:FOCUS { 
+	text-decoration: none; 
+	color: #d3a23b;
+}
+h1,h2,h3,h4,h5,h6{ 
+	margin: 0;
+}
+.container-fluid{ 
+	padding: 60px 0 30px;
+}

@@ -1,0 +1,95 @@
+body 
+{
+    background:#ffffff !important;
+    font-weight: 450 !important;
+    font-size: 16px !important;
+
+    
+}
+ .navbar-expand-md
+{
+    background: #038C65 !important;
+}
+.nav-link
+{
+    color: rgb(255, 255, 255) !important
+}
+
+.navbar-light .navbar-brand {
+    color: #FFFFFF;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: #FFFFFF;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #FFFFFF;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: #ccc !important;
+}
+
+.icon-grid-portal {
+    background-color: #F8F9FA;
+}
+
+.jumbotron {
+    margin-bottom: 0px !important;
+}
+
+.features-icons{
+    padding-top:7rem;
+    padding-bottom:7rem
+}
+
+.features-icons .features-icons-item{
+    max-width:20rem
+}
+
+.features-icons .features-icons-item .features-icons-icon{
+    height:7rem
+}
+
+.features-icons .features-icons-item .features-icons-icon i{
+    font-size:4.5rem
+}
+
+.features-icons .features-icons-item:hover .features-icons-icon i{
+    font-size:5rem
+} 
+
+header.masthead{
+    position:relative;
+    background-color:#343a40;
+    background:url("../images/1.jpg") no-repeat center center;
+    background-size:cover;
+    padding-top:8rem;
+    padding-bottom:8rem;
+   }
+   
+header.masthead .overlay{
+   position:absolute;
+   background-color:#212529;
+   height:100%;
+   width:100%;
+   top:0;
+   left:0;
+   opacity:.3
+}
+  
+header.masthead h1{
+   font-size:2rem
+}
+
+@media (min-width:768px){
+   header.masthead{
+       padding-top:12rem;
+       padding-bottom:12rem
+   }
+   header.masthead h1
+   {
+       font-size:3rem
+   }
+}

@@ -1,0 +1,89 @@
+
+#banner{ 
+	display: none;
+}
+#banner .bxslider{ margin: 0
+	padding: 0;
+	list-style: none;
+	left: 0;
+}
+#banner .bxslider img{ 
+	width: 100%;
+}
+#banner .bxslider .item{ 
+	display: block;
+	position: relative;
+}
+#banner .bx-pager{ 
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	z-index: 999;
+}
+#banner .bx-wrapper { 
+	position: relative;
+}
+#banner .bx-wrapper .bx-pager.bx-default-pager a{ 
+	width: 20px;
+	height: 5px;
+	display: inline-block;
+	text-indent: -99999px;
+	margin: 0 4px;
+	border: 0;
+	background: #CCC;
+	-webkit-border-radius: 4% !important;
+	-moz-border-radius: 4% !important;
+	border-radius: 4 !important;
+}
+#banner .bx-wrapper .bx-pager.bx-default-pager a:hover, 
+#banner .bx-wrapper .bx-pager.bx-default-pager a.active{ 
+	background: #d3a23b;
+}
+#banner .bx-pager-item{ 
+	display: inline-block;
+}
+#banner .bx-controls-direction{ 
+	display: block;
+}
+#banner .bx-controls-direction a{ 
+	position: absolute;
+	top: 50%;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	margin-top: -20px;
+	background: url("../../Images/icon/icon_next_2.png") no-repeat center center rgba(0, 0, 0, 0.1);
+	text-indent: -99999px;
+	overflow: hidden;
+	z-index: 999;
+	border-radius: 5px;
+}
+#banner .bx-controls-direction a.bx-prev{ 
+	left: 20px;
+	background-image: url("../../Images/icon/icon_prev_2.png");
+}
+#banner .bx-controls-direction a.bx-next{ 
+	right: 20px;
+	left: auto;
+	background-image: url("../../Images/icon/icon_next_2.png");
+}
+#banner .bx-controls-direction a:hover{ 
+	background-color: rgba(0, 0, 0, 0.3);
+}
+/* Responsive */
+@media all and (max-width: 768px){
+	#banner { 
+		margin-bottom: 20px;
+	}
+	#banner .bx-pager{ 
+		bottom: 10px; 
+		display: none;
+	}
+}
+
+ 
