@@ -1,0 +1,135 @@
+body {
+	background-color: #f7f7f9 !important;
+}
+
+@media all and (min-width: 768px) {
+	.navbar-fixed-width {
+	  width: 768px;
+	  margin-left: auto;
+	  margin-right:auto;
+   }
+  }
+  
+  @media all and (min-width: 992px) {
+	.navbar-fixed-width {
+	  width: 992px;
+	  margin-left: auto;
+	  margin-right:auto;
+	}
+  
+  }
+  
+  @media all and (min-width: 1200px) {
+	.navbar-fixed-width {
+	  width: 1200px;
+	  margin-left: auto;
+	  margin-right:auto;
+	}
+  }
+
+.box-search {
+	border-radius: 8px;
+}
+
+.box-search .form-control {
+	margin-bottom: 8px;
+}
+
+
+
+.box-info {
+	border-radius: 8px;
+	padding: 6px;
+	width: auto;
+	height: auto;
+}
+
+.col-8 .card {
+	/* margin-bottom: 20px;
+	width: 100% !important; */
+	padding: 10px;
+	box-shadow: 5px 5px 8px #888888;
+	margin-bottom: 20px;
+}
+
+.box-info-image {
+	width: 200px;
+	height: 150px;
+	float: left;
+}
+
+.box-info-image img {
+	width: 160px;
+	height: 85px;
+	float: left;
+	padding-left: 10px;	
+}
+
+
+.box-info-detail {
+	float: left;
+}
+
+.div-member-info {
+		height: 230px;
+		background: linear-gradient(to bottom right, #33ccff 0%, #ff99cc 100%);
+		margin-bottom: 16px;
+		padding: 70px 0;
+		  text-align: center;
+		  font-family: 'Fira Sans Extra Condensed', sans-serif;
+
+}
+
+.col-4 .card {
+	box-shadow: 5px 5px 8px #888888;
+}
+
+.box-control {
+	border-radius: 8px;
+	padding: 1rem;
+}
+
+.box-control img {
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+}
+
+.box-control .avatar {
+	float: left;
+}
+
+.box-control .info {
+	float: left;
+	margin-left: 15px;
+}
+
+.box-control .info .username {
+	font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+.box-control dl dd {
+	clear: both;
+		/* padding: 16px; */
+	padding-top: 16px;
+}
+
+.menu-list {
+	list-style-type: none;
+    padding: 0;
+    width: 100%;
+    display: block;
+}
+
+i {
+	margin-right: 8px !important;
+}
+
+.box-control .list-group {
+	clear: both;
+	padding-top: 16px;
+}
+
+.box-info-member-detail {
+	margin-top: 16px;
+}

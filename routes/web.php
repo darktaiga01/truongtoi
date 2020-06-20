@@ -17,9 +17,22 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/aboutus', function () {
+    return view('aboutus');
+});
+
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+
+Route::get('/user/dashboard','UserController@index')->name('user.dashboard');
+
+Route::prefix('admin')->group(function() {
+    Route::get('/login','Auth\AdminLoginController@showLoginForm')->name('admin.login');
+    Route::post('/login','Auth\AdminLoginController@login')->name('admin.login.submit');
+    Route::get('/','AdminController@index')->name('admin.dashboard');
+});
