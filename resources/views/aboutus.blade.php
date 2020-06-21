@@ -82,7 +82,7 @@
           </div>
         </div>
         <!-- End-->
-  
+        <p>Đã sửa about us</p>
       </div>
     </div>
   </div>
