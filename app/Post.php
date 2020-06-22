@@ -8,7 +8,7 @@ class Post extends Model
 {
     //
     protected  $fillable = [
-        'title', 'body'
+        'title', 'feature_img', 'body'
     ];
 
 

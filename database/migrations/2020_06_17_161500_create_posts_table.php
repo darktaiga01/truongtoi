@@ -17,6 +17,7 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->string('title')->default('Nameless');
             $table->text('body');
+            $table->text('feature_img');
             $table->timestamps();
         });
     }

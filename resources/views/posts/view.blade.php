@@ -1,24 +1,31 @@
 @extends('layouts.layout')
 
 @section('content')
-    <div class="row">
-        <div class="col-lg-11">
-                <h2>Laravel 6 CRUD Example</h2>
+   
+    <header class="masthead" style="background-image: url('{{ $post->feature_img }}')">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+              <div class="post-heading">
+                <h1 class="text-white">{{ $post->title }} </h1>
+                <span class="meta text-white">Posted {{ $post->created_at }}</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-lg-1">
-            <a class="btn btn-primary" href="{{ url('posts') }}"> Back</a>
+      </header>
+    
+      <!-- Post Content -->
+      <article>
+        <div class="container" style="margin-top: 25px;">
+          <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+              {!! $post->body !!}
+            </div>
+          </div>
         </div>
-    </div>
-    <table class="table table-bordered">
-        <tr>
-            <th>Title:</th>
-            <td>{{ $post->title }}</td>
-        </tr>
-        <tr>
-            <th>Body:</th>
-            <td>{{ $post->body }}</td>
-        </tr>
-
- 
-    </table>
+      </article>
+    
+      <hr>
 @endsection

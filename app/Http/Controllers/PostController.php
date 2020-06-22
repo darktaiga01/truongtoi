@@ -38,17 +38,22 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // xác thực data
         $request->validate([
             'txtTitle'=>'required',
+            'txtImg' => 'required',
             'txtBody'=>'required'
         ]);
 
+        // Lưu trữ ở data
         $post = new Post([
             'title' => $request->get('txtTitle'),
+            'feature_img' => $request->get('txtImg'),
             'body' => $request->get('txtBody')
         ]);
 
+
+        // Lưu lại, chuyển về trang cũ
         $post->save();
         return redirect('/posts')->with('success', 'Post has been added');
 
@@ -90,11 +95,13 @@ class PostController extends Controller
         //
         $request->validate([
             'txtTitle' => 'required',
+            'txtImg' => 'required',
             'txtBody' => 'required'
         ]);
 
         $post = Post::find($id);
         $post->title = $request->get('txtTitle');
+        $post->feature_img = $request->get('txtImg');
         $post->body = $request->get('txtBody');
 
         $post->update();
