@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 Route::get('/aboutus', function () {
     return view('aboutus');
-});
+})->name('aboutus');
 
 Auth::routes();
 
@@ -37,4 +37,15 @@ Route::prefix('admin')->group(function() {
     Route::get('/','AdminController@index')->name('admin.dashboard');
 });
 
-Route::resource('posts', 'PostController');
+// Route::get('/admin/posts',                 'PostController@index');
+Route::get('/post/{post}', 'PostController@show')->name('posts.show');
+// Route::get('/admin/posts/create',          'PostController@create');
+// Route::get('/admin/posts/{resource}/edit', 'PostController@edit');
+// Route::post('/admin/posts',                'PostController@store');
+// Route::put('/admin/posts/{post}',      'PostController@update');
+// Route::delete('/admin/posts/{post}',   'PostController@destroy');
+// Route::resource('posts', 'PostController');
+
+Route::resource('admin/posts', 'PostController')->except('show');
+
+Route::get('search', 'SearchController@search')->name('search');

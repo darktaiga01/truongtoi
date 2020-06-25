@@ -6,12 +6,12 @@
         <h1>List Post</h1>
         <hr>
 
-        <table class = "table">
+        <table class = "table table-bordered">
             <thead class="thead-dark">
             <tr>
                 <th scope="col" class="w-auto">ID</th>
                 <th scope="col">Title</th>
-                <th scope="col">Body</th>
+                <th scope="col">Category</th>
                 <th scope="col" class="w-25">Action</th>
             </tr>
         </thead>
@@ -23,7 +23,7 @@
                 <tr>
                     <td scope="row">{{ ++$i }}</td>
                     <td>{{ $post->title }}</td>
-                    <td>{{ $post->body }}</td>
+                    <td>{{ $post->category->name }}</td>
                     <td>
                         <form action="{{ route('posts.destroy', $post->id) }}" method = "POST">
                             <a class="btn btn-info" href="{{ route('posts.show', $post->id)}}">Show</a>

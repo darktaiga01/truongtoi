@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Category;
 use App\Post;
 use Illuminate\Http\Request;
 
@@ -12,6 +12,13 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth:admin', ['except' => 'show']);
+    }
+    
+    
     public function index()
     {
         //
@@ -27,7 +34,8 @@ class PostController extends Controller
     public function create()
     {
         //
-        return view('posts.create');    
+        $categories = Category::all();
+        return view('posts.create')->withCategories($categories);  
     }
 
     /**
@@ -42,20 +50,22 @@ class PostController extends Controller
         $request->validate([
             'txtTitle'=>'required',
             'txtImg' => 'required',
-            'txtBody'=>'required'
+            'txtBody'=>'required',
+            'category_id' => 'required'
         ]);
 
         // Lưu trữ ở data
         $post = new Post([
             'title' => $request->get('txtTitle'),
             'feature_img' => $request->get('txtImg'),
-            'body' => $request->get('txtBody')
+            'body' => $request->get('txtBody'),
+            'category_id' => $request->get('category_id')
         ]);
 
 
         // Lưu lại, chuyển về trang cũ
         $post->save();
-        return redirect('/posts')->with('success', 'Post has been added');
+        return redirect('/admin/posts')->with('success', 'Post has been added');
 
     }
 
@@ -80,7 +90,8 @@ class PostController extends Controller
     public function edit(POST $post)
     {
         //
-        return view('posts.edit', compact('post'));
+        $categories = Category::all();  
+        return view('posts.edit', compact('post', 'categories'));
     }
 
     /**
@@ -96,16 +107,19 @@ class PostController extends Controller
         $request->validate([
             'txtTitle' => 'required',
             'txtImg' => 'required',
-            'txtBody' => 'required'
+            'txtBody' => 'required',
+            'category_id' => 'required'
         ]);
 
         $post = Post::find($id);
+        
         $post->title = $request->get('txtTitle');
         $post->feature_img = $request->get('txtImg');
         $post->body = $request->get('txtBody');
+        $post->category_id = $request->get('category_id');
 
         $post->update();
-        return redirect('/posts')->with('success', 'Post updated successfully');
+        return redirect('/admin/posts')->with('success', 'Post updated successfully');
     }
 
     /**

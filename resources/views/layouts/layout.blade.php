@@ -39,10 +39,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="{{ route('home')}}">Trang chủ<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href='{{ route('aboutus') }}'>Về chúng tôi</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -64,11 +64,11 @@
           <!-- Authentication Links -->
           @guest
               <li class="nav-item">
-                  <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                  <a class="nav-link" href="{{ route('login') }}">{{ __('Đăng nhập') }}</a>
               </li>
               @if (Route::has('register'))
                   <li class="nav-item">
-                      <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                      <a class="nav-link" href="{{ route('register') }}">{{ __('Đăng ký') }}</a>
                   </li>
               @endif
           @else
@@ -78,12 +78,12 @@
                   </a>
 
                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ route('user.dashboard') }}">Dashboard</a>
+                    <a class="dropdown-item" href="{{ route('user.dashboard') }}">Bảng điều khiển</a>
 
                       <a class="dropdown-item" href="{{ route('logout') }}"
                          onclick="event.preventDefault();
                                        document.getElementById('logout-form').submit();">
-                          {{ __('Logout') }}
+                          {{ __('Đăng xuất') }}
                       </a>
 
                       <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -106,7 +106,7 @@
         <div class="row">
           <div class="col-md-12 text-center d-md-flex align-items-center">
             <ul class="nav mx-md-auto d-flex justify-content-center">
-              <li class="nav-item"> <a class="nav-link active" href="#">Trang chủ</a> </li>
+              <li class="nav-item"> <a class="nav-link active" href="{{ route('home') }}">Trang chủ</a> </li>
               <li class="nav-item"> <a class="nav-link" href="#">Trường học</a> </li>
               <li class="nav-item"> <a class="nav-link" href="#">Bài viết</a> </li>
               <li class="nav-item"> <a class="nav-link" href="#">Về chúng tôi</a> </li>

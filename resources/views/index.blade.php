@@ -10,10 +10,10 @@
           <p class="mb-3">Tra cứu ngành nghề cùng thông tin trường Đại học - Cao đẳng dễ dàng, nhanh chóng.</p>
         </div>
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-          <form>
+          <form method="GET" action="{{ route('search') }}">
             <div class="form-row">
               <div class="col-12 col-md-9 mb-2 mb-md-0">
-                <input type="search" class="form-control form-control-lg " id="inlineFormInputGroup"
+                <input type="search" name="txtSearch" class="form-control form-control-lg " id="inlineFormInputGroup"
                 placeholder="Nhập tên trường, ngành,..">
               </div>
               <div class="col-12 col-md-3">

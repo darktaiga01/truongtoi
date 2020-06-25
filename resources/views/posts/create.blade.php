@@ -5,8 +5,9 @@
     <script>
         tinymce.init({
           selector: '#txtBody',
-          plugins: 'a11ychecker advcode casechange formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
-          toolbar: 'a11ycheck addcomment showcomments casechange checklist code formatpainter pageembed permanentpen table',
+          plugins: 'anchor a11ychecker advcode casechange formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
+          toolbar: 'anchor a11ycheck addcomment showcomments casechange checklist code formatpainter pageembed permanentpen table',
+          menubar: 'insert',
           toolbar_mode: 'floating',
           tinycomments_mode: 'embedded',
           tinycomments_author: 'Author name',
@@ -40,8 +41,16 @@
                 <input type="text" class="form-control" id="txtImg" placeholder="Enter Feature Image" name="txtImg">
             </div>
             <div class="form-group">
+                <label for="category_id">Category:</label>
+                <select class="form-control" name="category_id">
+                    @foreach ($categories as $category)
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="form-group">
                 <label for="txtBody">Body:</label>
-                <textarea class="form-control" id="txtBody" name="txtBody" rows="10" placeholder="Enter Body"></textarea>
+                <textarea class="form-control" id="txtBody" name="txtBody" rows="30" placeholder="Enter Body"></textarea>
                 <script type="text/javascript">
                     $('#txtBody').wysihtml5();
                 </script>
