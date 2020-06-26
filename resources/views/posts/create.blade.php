@@ -1,4 +1,12 @@
-@extends('layouts.layout')
+{{-- @extends('layouts.layout') --}}
+@extends('adminlte::page')
+
+@section('title', 'Dashboard')
+
+@section('content_header')
+    <h1>Tạo bài mới</h1>
+    <hr>
+@stop
 
 @section('content')
     <script src="https://cdn.tiny.cloud/1/s9npd92lwltfwko9evfbuyhmv6m654gluxk2butj29es10mi/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
@@ -15,7 +23,7 @@
       </script>
 
 
-<div class="container" style="margin-top: 25px;">
+{{-- <div class="container" style="margin-top: 25px;"> --}}
 <div class="row">
     <div class="col-md-8 offset-md-2">
         @if ($errors->any())
@@ -28,8 +36,6 @@
             </ul>
         </div>
     @endif
-        <h1>Tạo bài mới</h1>
-        <hr>
         <form action="{{ route('posts.store') }}" method="POST">
             @csrf
             <div class="form-group">
@@ -59,7 +65,14 @@
         </form>
     </div>
 </div>
-</div>
+{{-- </div> --}}
 
 @endsection
 
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop

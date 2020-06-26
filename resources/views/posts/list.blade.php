@@ -1,12 +1,16 @@
-@extends('layouts.layout')
+@extends('adminlte::page')
+
+@section('title', 'Dashboard')
+
+@section('content_header')
+    <h1>Danh sách bài viết</h1>
+    <hr>
+@stop
 
 @section('content')
 <div class="row">
-    <div class="col-md-8 offset-md-2">
-        <h1>List Post</h1>
-        <hr>
-
-        <table class = "table table-bordered">
+    <div class="col-md-10 offset-md-1">
+        <table class = "table table-bordered bg-white">
             <thead class="thead-dark">
             <tr>
                 <th scope="col" class="w-auto">ID</th>
@@ -25,7 +29,7 @@
                     <td>{{ $post->title }}</td>
                     <td>{{ $post->category->name }}</td>
                     <td>
-                        <form action="{{ route('posts.destroy', $post->id) }}" method = "POST">
+                            <form action="{{ route('posts.destroy', $post->id) }}" method = "POST">
                             <a class="btn btn-info" href="{{ route('posts.show', $post->id)}}">Show</a>
                             <a class="btn btn-primary" href="{{ route('posts.edit',$post->id) }}">Edit</a>
                             @csrf
@@ -40,3 +44,11 @@
     </div>
 </div>
 @endsection
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop
