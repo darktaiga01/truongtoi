@@ -20,21 +20,19 @@
             </tr>
         </thead>
         <tbody>
-            @php
-             $i = 0;    
-            @endphp
+            
             @foreach ($posts as $post)
                 <tr>
-                    <td scope="row">{{ ++$i }}</td>
+                    <td scope="row">{{ $post->id }}</td>
                     <td>{{ $post->title }}</td>
                     <td>{{ $post->category->name }}</td>
                     <td>
                             <form action="{{ route('posts.destroy', $post->id) }}" method = "POST">
                             <a class="btn btn-info" href="{{ route('posts.show', $post->id)}}">Show</a>
                             <a class="btn btn-primary" href="{{ route('posts.edit',$post->id) }}">Edit</a>
-                            @csrf
-                            @method('DELETE')
+                            @csrf @method('DELETE')
                             <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
                     </td>
                 </tr>
                 

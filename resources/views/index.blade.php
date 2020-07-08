@@ -13,7 +13,7 @@
           <form method="GET" action="{{ route('search') }}">
             <div class="form-row">
               <div class="col-12 col-md-9 mb-2 mb-md-0">
-                <input type="search" name="txtSearch" class="form-control form-control-lg " id="inlineFormInputGroup"
+                <input type="search" name="keyword" class="form-control form-control-lg " id="inlineFormInputGroup"
                 placeholder="Nhập tên trường, ngành,..">
               </div>
               <div class="col-12 col-md-3">
