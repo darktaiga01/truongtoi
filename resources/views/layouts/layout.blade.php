@@ -48,7 +48,7 @@
               Giới thiệu
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Giới thiệu trường</a>
+              <a class="dropdown-item" href="{{ route('reviewshool') }}">Giới thiệu trường</a>
               <a class="dropdown-item" href="#">Giới thiệu ngành</a>
               <!--<div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">Something else here</a>-->

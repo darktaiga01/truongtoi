@@ -114,12 +114,7 @@
     </div>
   </section>
 
-
-<<<<<<< HEAD
-
- 
-=======
-  <div class="py-5" style="padding-bottom: 0px !important;">
+<!--  <div class="py-5" style="padding-bottom: 0px !important;">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 p-md-5 p-3 d-flex flex-column justify-content-center">
@@ -146,8 +141,7 @@
           </div>
         </div>
       </div>
-    </div>
->>>>>>> c822bea4f4337fb253f7a592f08fab7fad02c113
+    </div>-->
 <!-- Cột 2 -->
     <!--<div class="py-5 bg-light">
       <div class="container">
@@ -183,7 +177,7 @@
     <div class="py-5">
       <div class="container">
         <div class="row">
-          <div class="p-3 col-md-8">
+          <div class="p-3 col-md-4">
             <div class="blockquote mb-0">
               <p>"The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't
                 settle. As with all matters of the heart, you'll know when you find it."</p>
@@ -200,12 +194,12 @@
     <div class="py-5 text-center" style="background-color: #01403A;">
       <div class="container">
         <div class="row">
-          <div class="col-md-9 p-3">
-            <h1 class="mb-0">
+          <div class="col-md-8 p-3">
+           <h1 class="mb-0">
               <h3 class="text-white">Bạn đã sẵn sàng cùng chúng tôi?</h3>
             </h1>
           </div>
-          <div class="col-md-3 align-items-center d-flex justify-content-center p-3"> <a class="btn btn-lg btn-light"
+          <div class="col-md-4 align-items-center d-flex justify-content-center p-3"> <a class="btn btn-lg btn-light"
               href="#">Đăng kí</a> </div>
         </div>
       </div>

@@ -21,6 +21,9 @@ Route::get('/aboutus', function () {
     return view('aboutus');
 })->name('aboutus');
 
+Route::get('/reviewshool', function () {
+    return view('reviewshool');
+})->name('reviewshool');
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
