@@ -6,9 +6,20 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 text-light">
-          <span>Category</span>
-          <h3>Sports</h3>
-          <p>Category description here.. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam error eius quo, officiis non maxime quos reiciendis perferendis doloremque maiores!</p>
+          <span>Nhóm ngành</span>
+          @foreach($majors as $major)
+          <h3>{{ $major->name }}</h3>
+          @switch($major->id)
+              @case(1)
+              <p>Khoa học kỹ thuật là các ngành khoa học liên quan tới việc phát triển kỹ thuật và thiết kế các sản phẩm trong đó có ứng dụng các kiến thức khoa học tự nhiên.</p>
+                  @break
+              @case(2)
+                  
+                  @break
+              @default
+                  
+          @endswitch
+          @endforeach
         </div>
       </div>
     </div>
@@ -18,59 +29,23 @@
   <div class="site-section bg-white">
     <div class="container">
       <div class="row">
+        @foreach($universities as $university)
         <div class="col-lg-4 mb-4">
           <div class="entry2 card shadow-sm p-3 mb-5 bg-white rounded">
-            <a href="single.html"><img src="https://colorlib.com/preview/theme/miniblog/images/img_1.jpg" alt="Image" class="img-fluid rounded"></a>
+            <a href="single.html"><img src="{{ $university->feature_img }}" alt="Image" class="img-fluid rounded"></a>
             <div class="excerpt">
-            <span class="post-category text-white bg-secondary mb-3">Politics</span>
+            <span class="post-category text-white bg-secondary mb-3">{{ $university->location->name }}</span>
 
-            <h2><a href="single.html">The AI magically removes moving objects from videos.</a></h2>
-            
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
-              <p><a class="btn btn-dark" href="#">Read More</a></p>
+            <h2><a href="single.html">{{ $university->title }}</a></h2>
+            <p class="font-weight-bolder text-info">Chuyên ngành: <span class="font-weight-normal text-body">{{ $university->major->name }}</span> </p>
+            <p class="font-weight-bolder text-info">Điểm TB: <span class="font-weight-normal text-body">{{ $university->avg_mark }}</span> </p>
+            <hr>
+              <p><a class="btn btn-dark" href="{{ url('university', $university->id) }}">Xem chi tiết</a></p>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 mb-4">
-          <div class="entry2 card shadow-sm p-3 mb-5 bg-white rounded">
-            <a href="single.html"><img src="https://colorlib.com/preview/theme/miniblog/images/img_1.jpg" alt="Image" class="img-fluid rounded"></a>
-            <div class="excerpt">
-            <span class="post-category text-white bg-success mb-3">Nature</span>
-
-            <h2><a href="single.html">The AI magically removes moving objects from videos.</a></h2>
-            
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
-              <p><a class="btn btn-dark" href="#">Read More</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 mb-4">
-          <div class="entry2 card shadow-sm p-3 mb-5 bg-white rounded">
-            <a href="single.html"><img src="https://colorlib.com/preview/theme/miniblog/images/img_1.jpg" alt="Image" class="img-fluid rounded"></a>
-            <div class="excerpt">
-            <span class="post-category text-white bg-warning mb-3">Travel</span>
-
-            <h2><a href="single.html">The AI magically removes moving objects from videos.</a></h2>
-            
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
-              <p><a class="btn btn-dark" href="#">Read More</a></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 mb-4">
-            <div class="entry2 card shadow-sm p-3 mb-5 bg-white rounded">
-              <a href="single.html"><img src="https://colorlib.com/preview/theme/miniblog/images/img_1.jpg" alt="Image" class="img-fluid rounded"></a>
-              <div class="excerpt">
-              <span class="post-category text-white bg-warning mb-3">Travel</span>
-  
-              <h2><a href="single.html">The AI magically removes moving objects from videos.</a></h2>
-              
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
-                <p><a class="btn btn-dark" href="#">Read More</a></p>
-              </div>
-            </div>
-          </div>
-    </div>
+        @endforeach
+      </div>
+  </div>
   </div>
 @endsection

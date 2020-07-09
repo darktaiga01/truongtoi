@@ -36,7 +36,7 @@
             </ul>
         </div>
         @endif
-        <form action="{{ route('posts.store') }}" method="POST">
+        <form action="{{ route('university.store') }}" method="POST">
             @csrf
             <div class="form-group">
                 <label for="txtTitle">Title:</label>
@@ -47,25 +47,23 @@
                 <input type="text" class="form-control" id="txtImg" placeholder="Enter Feature Image" name="txtImg">
             </div>
             <div class="form-group">
-                <label for="category_id">Category:</label>
-                <select class="form-control" name="category_id">
-                    {{-- @foreach ($categories as $category)
-                    @if($category->parent_id == NULL)
-                    <option value="{{ $category->id }}"><strong>{{ $category->name }}</strong></option>
-                    @else 
-                    <option value="{{ $category->id }}">{{ $category->name }}</option> 
-                    @endif
-                    @endforeach --}}
-
-                    @foreach ($categories as $category)
-                    <option value="{{ $category->id }}">{{ $category->name }}</option>
-                    @if ($category->children)
-                        @foreach ($category->children as $child)
-                            <option value="{{ $child->id }}" >&nbsp;&nbsp;{{ $child->name }}</option>
-                        @endforeach
-                    @endif
+                <label for="major_id">Category:</label>
+                <select class="form-control" name="major_id">
+                    @foreach ($majors as $major)
+                    <option value="{{ $major->id }}">{{ $major->name }}</option>
                     @endforeach
-
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="avg_mark">Average Mark:</label>
+                <input type="text" class="form-control" id="avg_mark" placeholder="Enter Mark" name="avg_mark">
+            </div>
+            <div class="form-group">
+                <label for="location_id">Location:</label>
+                <select class="form-control" name="location_id">
+                    @foreach ($location as $city)
+                    <option value="{{ $city->id }}">{{ $city->name }}</option>
+                    @endforeach
                 </select>
             </div>
             <div class="form-group">

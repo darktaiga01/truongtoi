@@ -4,12 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Location extends Model
+class Major extends Model
 {
     //
-    protected $table = 'location';
+    protected $table = 'majors';
 
-    public function posts()
+    public function universities()
     {
         return $this->hasMany('App\University');
     }

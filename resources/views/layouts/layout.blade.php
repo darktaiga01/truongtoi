@@ -47,13 +47,14 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
-              Dropdown
+              Danh sách trường
             </a>
+            <?php $cats=DB::table('majors')->get(); ?>
+            
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
+              @foreach($cats as $cat)
+              <a class="dropdown-item" href="{{ url('major',$cat->id) }}  ">{{ $cat->name }}</a>
+              @endforeach
             </div>
           </li>
           <li class="nav-item">

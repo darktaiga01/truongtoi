@@ -265,10 +265,53 @@ return [
             'submenu' => [
                 [
                     'text' => 'Thêm trường',
-                    'url'  => 'admin/posts/create',
+                    'url'  => 'admin/university/create',
                 ],
                 [
                     'text' => 'Quản lý trường',
+                    'url'  => 'admin/university',
+                ],
+                // [
+                //     'text'    => 'level_one',
+                //     'url'     => '#',
+                //     'submenu' => [
+                //         [
+                //             'text' => 'level_two',
+                //             'url'  => '#',
+                //         ],
+                //         [
+                //             'text'    => 'level_two',
+                //             'url'     => '#',
+                //             'submenu' => [
+                //                 [
+                //                     'text' => 'level_three',
+                //                     'url'  => '#',
+                //                 ],
+                //                 [
+                //                     'text' => 'level_three',
+                //                     'url'  => '#',
+                //                 ],
+                //             ],
+                //         ],
+                //     ],
+                // ],
+                // [
+                //     'text' => 'level_one',
+                //     'url'  => '#',
+                // ],
+            ],
+        ],
+        ['header' => 'QUẢN LÝ BÀI VIẾT'],
+        [
+            'text'    => 'BÀI VIẾT',
+            'icon'    => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => 'Bài đăng mới',
+                    'url'  => 'admin/posts/create',
+                ],
+                [
+                    'text' => 'Quản lý bài viết',
                     'url'  => 'admin/posts',
                 ],
                 // [
@@ -301,21 +344,10 @@ return [
                 // ],
             ],
         ],
-        ['header' => 'labels'],
         [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
+            'text'    => 'CHUYÊN MỤC',
+            'icon'    => 'fas fa-fw fa-share',
+            'url'      => 'admin/category'
         ],
     ],
 

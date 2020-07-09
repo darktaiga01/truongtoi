@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddLocationIdToPosts extends Migration
+class AddMajorsIdToUniversities extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,12 @@ class AddLocationIdToPosts extends Migration
      */
     public function up()
     {
-        Schema::table('posts', function (Blueprint $table) {
+        Schema::table('universities', function (Blueprint $table) {
             //
-            $table->integer('location_id')->nullable()->unsigned();
+            $table->integer('major_id')->nullable()->unsigned();
+
+        
+            // $table->foreign('category_id')->references('id')->on('categories');
         });
     }
 
@@ -26,9 +29,9 @@ class AddLocationIdToPosts extends Migration
      */
     public function down()
     {
-        Schema::table('posts', function (Blueprint $table) {
+        Schema::table('universities', function (Blueprint $table) {
             //
-            $table->dropColumn('location_id');
+            $table->dropColumn('major_id');
         });
     }
 }
