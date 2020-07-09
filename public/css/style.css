@@ -59,7 +59,12 @@ body
 .features-icons .features-icons-item:hover .features-icons-icon i{
     font-size:5rem
 } 
-
+.dropdown:hover .dropdown-menu{
+  display: block;
+}
+.carousel-caption{
+  color: #22f82bf5 !important;
+}
 header.masthead{
     position:relative;
     background-color:#343a40;

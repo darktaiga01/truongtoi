@@ -1,7 +1,8 @@
 @extends('layouts.layout')
 
 @section('content')
-<header class="masthead text-white text-center">
+
+<!--<header class="masthead text-white text-center">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
@@ -25,7 +26,59 @@
       </div>
     </div>
   </header>
+<div class="py-5">-->
+    <div class="container">
+      <div class="row">
+        <!--<div class="col-lg-8 p-md-5 p-3 d-flex flex-column justify-content-center">
+          <h1>Hàng ngàn trường đại học trên khắp cả nước</h1>
+          <p class="mb-0">TruongTui là trang web hỗ trợ học sinh, sinh viên, phụ huynh có nhu cầu tìm hiểu về các thông
+            tin của trường học và ngành nghề mong muốn một cách nhanh chóng và chính xác.</p>
+        </div>
+        <div class="col-lg-4 p-3">-->
+<div id="myCarousel" class="carousel slide">
 
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li class="item1 active"></li>
+    <li class="item2"></li>
+    <li class="item3"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../images/banner_0.jpg" alt="Công nghệ thông tin" width="1100" height="500" >
+      <div class="carousel-caption">
+        <h2>HÀNG NGÀN TRƯỜNG ĐẠI HỌC TRÊN KHẮP CẢ NƯỚC</h2>
+        <h5>Hỗ trợ học sinh, sinh viên, phụ huynh tìm thông tin của trường học - ngành nghề mong muốn</h5>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="../images/banner_1.jpg" alt="Luật" width="1100" height="500">
+      <div class="carousel-caption">
+        <h2>NHANH CHÓNG - CHÍNH XÁC - ĐẦY ĐỦ</h2>
+        <h5>Chúng tôi luôn cố gắng mang đến thông tin đầy đủ nhất</h5>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="../images/1.png" alt="Bách khoa" width="1100" height="500">
+      <div class="carousel-caption">
+        <h2>HÃY TRẢI NGHIỆM CÙNG CHÚNG TÔI</h2>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#myCarousel">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#myCarousel">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+        </div>
+      </div>
+   <!--</div>-->
   <!-- Icon grid -->
   <section class="features-icons bg-light text-center">
     <div class="container">
@@ -62,6 +115,10 @@
   </section>
 
 
+<<<<<<< HEAD
+
+ 
+=======
   <div class="py-5" style="padding-bottom: 0px !important;">
     <div class="container">
       <div class="row">
@@ -90,8 +147,9 @@
         </div>
       </div>
     </div>
+>>>>>>> c822bea4f4337fb253f7a592f08fab7fad02c113
 <!-- Cột 2 -->
-    <div class="py-5 bg-light">
+    <!--<div class="py-5 bg-light">
       <div class="container">
         <div class="row">
           
@@ -119,7 +177,7 @@
           </div>
         </div>
       </div>
-</div>
+</div>-->
 
 
     <div class="py-5">
@@ -152,4 +210,33 @@
         </div>
       </div>
     </div>
+    
+    </div>
+    
+
+<script>
+$(document).ready(function(){
+  // Activate Carousel
+  $("#myCarousel").carousel();
+    
+  // Enable Carousel Indicators
+  $(".item1").click(function(){
+    $("#myCarousel").carousel(0);
+  });
+  $(".item2").click(function(){
+    $("#myCarousel").carousel(1);
+  });
+  $(".item3").click(function(){
+    $("#myCarousel").carousel(2);
+  });
+    
+  // Enable Carousel Controls
+  $(".carousel-control-prev").click(function(){
+    $("#myCarousel").carousel("prev");
+  });
+  $(".carousel-control-next").click(function(){
+    $("#myCarousel").carousel("next");
+  });
+});
+</script>
 @endsection
