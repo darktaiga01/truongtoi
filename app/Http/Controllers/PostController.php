@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Category;
 use App\Post;
+use App\Location;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -35,7 +36,8 @@ class PostController extends Controller
     {
         //
         $categories = Category::all();
-        return view('posts.create')->withCategories($categories);  
+        $location = Location::all();
+        return view('posts.create')->withCategories($categories)->withLocation($location);  
     }
 
     /**
@@ -51,7 +53,9 @@ class PostController extends Controller
             'txtTitle'=>'required',
             'txtImg' => 'required',
             'txtBody'=>'required',
-            'category_id' => 'required'
+            'category_id' => 'required',
+            'avg_mark' => 'required',
+            'location_id' => 'required'
         ]);
 
         // Lưu trữ ở data
@@ -59,7 +63,9 @@ class PostController extends Controller
             'title' => $request->get('txtTitle'),
             'feature_img' => $request->get('txtImg'),
             'body' => $request->get('txtBody'),
-            'category_id' => $request->get('category_id')
+            'category_id' => $request->get('category_id'),
+            'avg_mark' => $request->get('avg_mark'),
+            'location_id' => $request->get('location_id')
         ]);
 
 
@@ -90,8 +96,9 @@ class PostController extends Controller
     public function edit(POST $post)
     {
         //
-        $categories = Category::all();  
-        return view('posts.edit', compact('post', 'categories'));
+        $categories = Category::all();
+        $location = Location::all();
+        return view('posts.edit', compact('post', 'categories', 'location'));
     }
 
     /**
@@ -108,7 +115,9 @@ class PostController extends Controller
             'txtTitle' => 'required',
             'txtImg' => 'required',
             'txtBody' => 'required',
-            'category_id' => 'required'
+            'category_id' => 'required',
+            'avg_mark' => 'required',
+            'location_id' => 'required'
         ]);
 
         $post = Post::find($id);
@@ -117,7 +126,8 @@ class PostController extends Controller
         $post->feature_img = $request->get('txtImg');
         $post->body = $request->get('txtBody');
         $post->category_id = $request->get('category_id');
-
+        $post->avg_mark = $request->get('avg_mark');
+        $post->location_id = $request->get('location_id');
         $post->update();
         return redirect('/admin/posts')->with('success', 'Post updated successfully');
     }

@@ -7,7 +7,7 @@
       <div class="row">
         <div class="col-xl-9 mx-auto">
           <h2 class="my-3">TÌM TRƯỜNG, CHỌN NGÀNH NHANH CHÓNG CHÍNH XÁC</h2>
-          <p class="mb-3">Tra cứu ngành nghề cùngfdsffsdfdfdwdfs thông tin trường Đại học - Cao đẳng dễ dàng, nhanh chóng.</p>
+          <p class="mb-3">Tra cứu ngành nghề cùng thông tin trường Đại học - Cao đẳng dễ dàng, nhanh chóng.</p>
         </div>
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
           <form method="GET" action="{{ route('search') }}">
@@ -62,7 +62,7 @@
   </section>
 
 
-  <div class="py-5">
+  <div class="py-5" style="padding-bottom: 0px !important;">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 p-md-5 p-3 d-flex flex-column justify-content-center">

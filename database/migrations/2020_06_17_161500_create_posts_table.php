@@ -18,6 +18,7 @@ class CreatePostsTable extends Migration
             $table->string('title')->default('Nameless');
             $table->text('body');
             $table->text('feature_img');
+            $table->double('avg_mark');
             $table->timestamps();
         });
     }

@@ -18,7 +18,8 @@
       <div class="w-100 p-3" style="background-color: #72C2AB;">
       <div class="container">
         <i class="fa fa-calendar-o text-light" aria-hidden="true"></i><span class="meta text-light">Posted {{ $post->created_at }}</span> &emsp;
-        <i class="fa fa-graduation-cap text-light" aria-hidden="true"></i><span class="meta text-light">Nhóm ngành: {{ $post->category->name }}</span>
+        <i class="fa fa-graduation-cap text-light" aria-hidden="true"></i><span class="meta text-light">Nhóm ngành: {{ $post->category->name }}</span> &emsp;
+        <i class="fa fa-car text-light" aria-hidden="true"></i><span class="meta text-light">Tỉnh thành: {{ $post->location->name }}</span>
       </div>
     </div>
 

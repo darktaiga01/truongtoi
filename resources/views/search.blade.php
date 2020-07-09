@@ -15,22 +15,30 @@
 				<div class="box-search">
 				<div class="card">
 					<div class="card-header">
-						Tuỳ chọndsafdasdsasad
+						Tìm kiếm nâng cao
 					</div>
 					<div class="card-body">
-						<form>
-							<label for="location">Location</label>
-							<select class="form-control" id="location">
-								<option>Default select</option>
+						<form action = "{{ route('advancedSearch') }}" method = 'get'>
+							<label for="category_id">Khối ngành</label>
+							<select class="form-control" id="category_id" name="category_id">
+								@foreach ($categories as $category)
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                    @endforeach
 							</select>
-							<label for="location">Location</label>
-							<select class="form-control" id="location">
-								<option>Default select</option>
+							<label for="location_id">Vị trí</label>
+							<select class="form-control" id="location_id" name="location_id">
+								@foreach ($locations as $city)
+                    <option value="{{ $city->id }}">{{ $city->name }}</option>
+                    @endforeach
 							</select>
-							<label for="location">Location</label>
-							<select class="form-control" id="location">
-								<option>Default select</option>
-							</select>
+							<div class="form-group">
+								<label for="avg_mark">Average Mark:</label>
+								<input type="text" class="form-control" id="avg_mark" placeholder="Enter Mark" name="avg_mark">
+							</div>
+							<div class="form-group">
+								<label for="title">Title:</label>
+								<input type="text" class="form-control" id="title" placeholder="Enter Title" name="title">
+							</div>
 							<br>
 							<button type="submit" class="btn btn-primary">Submit</button>
 						</form>

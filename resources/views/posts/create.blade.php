@@ -35,7 +35,7 @@
                 @endforeach
             </ul>
         </div>
-    @endif
+        @endif
         <form action="{{ route('posts.store') }}" method="POST">
             @csrf
             <div class="form-group">
@@ -51,6 +51,18 @@
                 <select class="form-control" name="category_id">
                     @foreach ($categories as $category)
                     <option value="{{ $category->id }}">{{ $category->name }}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="avg_mark">Average Mark:</label>
+                <input type="text" class="form-control" id="avg_mark" placeholder="Enter Mark" name="avg_mark">
+            </div>
+            <div class="form-group">
+                <label for="location_id">Location:</label>
+                <select class="form-control" name="location_id">
+                    @foreach ($location as $city)
+                    <option value="{{ $city->id }}">{{ $city->name }}</option>
                     @endforeach
                 </select>
             </div>

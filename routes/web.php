@@ -49,3 +49,7 @@ Route::get('/post/{post}', 'PostController@show')->name('posts.show');
 Route::resource('admin/posts', 'PostController')->except('show');
 
 Route::get('search', 'SearchController@search')->name('search');
+
+Route::get('categories', function () {
+    return view('categories.view');
+});

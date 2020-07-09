@@ -248,7 +248,7 @@ return [
             // 'label'       => 4,
             // 'label_color' => 'success',
         ],
-        ['header' => 'QUẢN LÝ BÀI VIẾT'],
+        ['header' => 'QUẢN LÝ TRƯỜNG ĐH'],
         // [
         //     'text' => 'profile',
         //     'url'  => 'admin/settings',
@@ -260,15 +260,15 @@ return [
         //     'icon' => 'fas fa-fw fa-lock',
         // ],
         [
-            'text'    => 'Bài viết',
+            'text'    => 'ĐẠI HỌC',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'Tạo bài viết',
+                    'text' => 'Thêm trường',
                     'url'  => 'admin/posts/create',
                 ],
                 [
-                    'text' => 'Quản lý bài viết',
+                    'text' => 'Quản lý trường',
                     'url'  => 'admin/posts',
                 ],
                 // [
