@@ -24,6 +24,12 @@ Route::get('/aboutus', function () {
 Route::get('/reviewshool', function () {
     return view('reviewshool');
 })->name('reviewshool');
+Route::get('/news', function () {
+    return view('news');
+})->name('news');
+Route::get('/discuss', function () {
+    return view('discuss');
+})->name('discuss');
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');

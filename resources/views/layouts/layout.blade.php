@@ -70,10 +70,10 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Tin tức</a>
+            <a class="nav-link" href="{{ route('news') }}">Tin tức</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Thảo luận</a>
+            <a class="nav-link" href="{{ route('discuss') }}">Thảo luận</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href='{{ route('aboutus') }}'>Về chúng tôi</a>

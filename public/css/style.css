@@ -182,3 +182,14 @@ header.masthead h1{
     font-weight: 700;
     font-size: .6rem;
     text-transform: uppercase; }
+.ddd{
+  float: left;
+  width: calc(100% - 65px);
+  padding-left: 10px;
+  line-height: 16px;
+  display: inline;
+}
+.td-bottom{
+  text-align: right;
+  vertical-align: bottom !important;
+}
