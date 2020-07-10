@@ -1,5 +1,5 @@
 @extends('layouts.layout')
-
+@section('title','TruongToi - Web tra cứu trường đại học')
 @section('content')
 
 <!--<header class="masthead text-white text-center">
@@ -27,6 +27,7 @@
     </div>
   </header>
 <div class="py-5">-->
+  <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <!--<div class="col-lg-8 p-md-5 p-3 d-flex flex-column justify-content-center">

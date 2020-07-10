@@ -24,12 +24,8 @@ Route::get('/aboutus', function () {
 Route::get('/reviewshool', function () {
     return view('reviewshool');
 })->name('reviewshool');
-Route::get('/news', function () {
-    return view('news');
-})->name('news');
-Route::get('/discuss', function () {
-    return view('discuss');
-})->name('discuss');
+Route::get('/news', 'CategoryController@news')->name('news');
+Route::get('/discuss', 'CategoryController@discus')->name('discuss');
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
@@ -66,3 +62,6 @@ Route::get('/post/{post}', 'PostController@show')->name('posts.show');
 Route::resource('admin/posts', 'PostController')->except('show');
 
 Route::get('/major/{id}', 'HomeController@showMajorList')->name('majorShow');
+Route::get('/category/{id}', 'HomeController@showMajorPostList')->name('majorPostShow');
+Route::get('/profile/{id}', 'UserController@profile')->name('profileIndex');
+Route::post('/profile/{id}', 'UserController@update_avatar')->name('avatar');

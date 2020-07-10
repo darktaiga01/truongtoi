@@ -166,7 +166,7 @@
           $('.edit-category').on('click', function() {
             var id = $(this).data('id');
             var name = $(this).data('name');
-            var url = "{{ url('category') }}/" + id;
+            var url = "{{ url('admin/category') }}/" + id;
 
             $('#editCategoryModal form').attr('action', url);
             $('#editCategoryModal form input[name="name"]').val(name);

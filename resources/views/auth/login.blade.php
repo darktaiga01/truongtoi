@@ -152,7 +152,7 @@
 
                 <div class="custom-control custom-checkbox mb-3">
                   <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                  <label class="custom-control-label" for="remember">Ghi nhớ mật khẩu</label>
+                  <label for="remember">Ghi nhớ mật khẩu</label>
                 </div>
                 <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Đăng nhập</button>
                 <div class="text-center">

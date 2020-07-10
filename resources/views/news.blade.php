@@ -36,50 +36,40 @@
 	<div class="container">
   <ul class="list-group list-group-flush">
     <li class="list-group-item">Tin tuyển sinh</li>
+    @foreach($tuyensinh  as $ts)
     <li class="list-group-item">
-    	<a href="#">
+    	
+      <?php $string = substr(strip_tags($ts->body), strpos($ts->body, "<p>"), strpos($ts->body, "</p>")+4); ?>
     	<div class="row" style="width: 100%; height: 90px;">
-    		<div class="col-md-2" style="text-align: center;"><img src="../images/tin-tuc-UIT.jpg" alt="Tuyển sinh công nghệ thông tin" style="width: 100px; height: 90px;"></div>
+    		<div class="col-md-2" style="text-align: center;"><img src="{{ $ts->feature_img}}"style="width: 150px; height: 90px;"></div>
     		<div class="col-md-10">
-    			<h4>Thông tin tuyển sinh Đại học Công nghệ thông tin TP HCM</h4>
-    			<span class="ddd" data-ddd-line="2" style="overflow-wrap: break-word;">Trường Đại học Công nghệ thông tin TP HCM trực thuộc Đại học Quốc gia TP HCM thông báo chiêu sinh sinh viên vào học tại trường với các nhóm ngành liên quan công nghệ thông tin. </span>
+    			<a href="post/{{ $ts->id }}"><h4 class="text-dark font-weight-bold">{{ $ts->title }}</h4></a>
+    			<span class="ddd" data-ddd-line="2" style="overflow-wrap: break-word;"> {!! $string !!} </span>
     		</div>
     	</div>
-    </a>
+    
     </li>
-    <li class="list-group-item"><a href="#">
-    	<div class="row" style="width: 100%; height: 90px;">
-    		<div class="col-md-2" style="text-align: center;"><img src="../images/tin-tuc-BK.jpg" alt="Tuyển sinh Bách Khoa HCM" style="width: 100px; height: 90px;"></div>
-    		<div class="col-md-10">
-    			<h4>Thông tin tuyển sinh Đại học Bách Khoa TP HCM</h4>
-    			<span class="ddd" data-ddd-line="2" style="overflow-wrap: break-word;">Trường Đại học Bách khoa TP HCM trực thuộc Đại học Quốc gia TP HCM thông báo chiêu sinh sinh viên vào học tại trường với các nhóm ngành liên quan kỹ thuật- công nghệ. </span>
-    		</div>
-    	</div>
-    </a></li>
-    <li class="list-group-item"><a href="#">
-    	<div class="row" style="width: 100%; height: 90px;">
-    		<div class="col-md-2" style="text-align: center;"><img src="../images/tin-tuc-Cantho.png" alt="Tuyển sinh Cần thơ" style="width: 100px; height: 90px;"></div>
-    		<div class="col-md-10">
-    			<h4>Thông tin tuyển sinh Đại học Cần Thơ</h4>
-    			<span class="ddd" data-ddd-line="2" style="overflow-wrap: break-word;">Trường Đại học Cần thơ thông báo chiêu sinh sinh viên vào học tại trường với tất cả nhóm ngành . </span>
-    		</div>
-    	</div>
-    </a></li>
+    @endforeach
   </ul>
 </div>
 <div class="py-5">
 	<div class="container">
 		<ul class="list-group list-group-flush">
 			<li class="list-group-item">Tin tức liên quan</li>
-			<li class="list-group-item">
-				<div class="row" style="width: 100%; height: 90px;">
-    		<div class="col-md-2" style="text-align: center;"><img src="../images/tin-tuc-Cantho.png" alt="Tuyển sinh Cần thơ" style="width: 100px; height: 90px;"></div>
-    		<div class="col-md-10">
-    			<h4>Loạt trường ra tự chủ</h4>
-    			<span class="ddd" data-ddd-line="2" style="overflow-wrap: break-word;">Trường Đại học Cần thơ thông báo chiêu sinh sinh viên vào học tại trường với tất cả nhóm ngành . </span>
-    		</div>
-    	</div>
-			</li>
+      @foreach($other  as $ot)
+      <li class="list-group-item">
+        
+        <?php $string = substr(strip_tags($ot->body), strpos($ot->body, "<p>"), strpos($ot->body, "</p>")+4); ?>
+        <div class="row" style="width: 100%; height: 90px;">
+          <div class="col-md-2" style="text-align: center;"><img src="{{ $ot->feature_img}}"style="width: 150px; height: 90px;"></div>
+          <div class="col-md-10">
+            <a href="post/{{ $ot->id }}"><h4 class="text-dark font-weight-bold">{{ $ot->title }}</h4></a>
+            <span class="ddd" data-ddd-line="2" style="overflow-wrap: break-word;"> {!! $string !!} </span>
+          </div>
+        </div>
+      
+      </li>
+      @endforeach
 		</ul>
 	</div>
 </div>

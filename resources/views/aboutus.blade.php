@@ -21,21 +21,18 @@
     <div class="container py-5">
       <div class="row mb-4">
         <div class="col-lg-5">
-          <h2 class="display-4 font-weight-light">Our team</h2>
-          <p class="font-italic text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <h2 class="display-4 font-weight-light">Chúng tôi là</h2>
+          <p class="font-italic text-muted">sinh viên trường Đại Học Công Nghệ Thông Tin</p>
         </div>
       </div>
   
       <div class="row text-center">
         <!-- Team item-->
         <div class="col-xl-3 col-sm-6 mb-5">
-          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834132/avatar-4_ozhrib.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-            <h5 class="mb-0">Manuella Nevoresky</h5><span class="small text-uppercase text-muted">CEO - Founder</span>
+          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://i.pinimg.com/474x/72/96/1f/72961f0c446d82e14ebca1ca01b4952f.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <h5 class="mb-0">Đặng Ngọc Tân</h5><span class="small text-uppercase text-muted">Nhóm trưởng - Backend Developer</span>
             <ul class="social mb-0 list-inline mt-3">
-              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
-              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
-              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
-              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.facebook.com/linkylist" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
             </ul>
           </div>
         </div>
@@ -43,13 +40,10 @@
   
         <!-- Team item-->
         <div class="col-xl-3 col-sm-6 mb-5">
-          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834130/avatar-3_hzlize.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-            <h5 class="mb-0">Samuel Hardy</h5><span class="small text-uppercase text-muted">CEO - Founder</span>
+          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://scontent.fvca1-2.fna.fbcdn.net/v/t1.0-9/s960x960/84332143_1071351493197388_8907038001763188736_o.jpg?_nc_cat=104&_nc_sid=85a577&_nc_ohc=8TrRJi7QKdcAX-_23TD&_nc_ht=scontent.fvca1-2.fna&_nc_tp=7&oh=09fc24d7c6792e681ee480a5a27112ec&oe=5F2E2BA6" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <h5 class="mb-0">Nguyễn Trần Thị Bích Trâm</h5><span class="small text-uppercase text-muted">Thành viên - Frontend Developer</span>
             <ul class="social mb-0 list-inline mt-3">
-              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
-              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
-              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
-              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.facebook.com/tram.1510" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
             </ul>
           </div>
         </div>
@@ -57,13 +51,11 @@
   
         <!-- Team item-->
         <div class="col-xl-3 col-sm-6 mb-5">
-          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834133/avatar-2_f8dowd.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-            <h5 class="mb-0">Tom Sunderland</h5><span class="small text-uppercase text-muted">CEO - Founder</span>
+          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://scontent.fvca1-1.fna.fbcdn.net/v/t1.0-9/p960x960/106702527_154436849550480_3318648830079649681_o.jpg?_nc_cat=111&_nc_sid=85a577&_nc_ohc=fr76kl4RnO8AX9bqzhV&_nc_ht=scontent.fvca1-1.fna&_nc_tp=6&oh=5c521ba59bedfcf01eafdf0944e73445&oe=5F2E44FB" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <h5 class="mb-0">Trần Bình Tú</h5><span class="small text-uppercase text-muted">Thành viên - Frontend Developer</span>
             <ul class="social mb-0 list-inline mt-3">
-              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
-              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
-              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
-              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.facebook.com/jjk.pjm.191310" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+
             </ul>
           </div>
         </div>
@@ -71,18 +63,14 @@
   
         <!-- Team item-->
         <div class="col-xl-3 col-sm-6 mb-5">
-          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834133/avatar-1_s02nlg.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-            <h5 class="mb-0">John Tarly</h5><span class="small text-uppercase text-muted">CEO - Founder</span>
+          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://scontent.fvca1-1.fna.fbcdn.net/v/t1.0-9/86860253_3201521600072157_5975702528522715136_n.jpg?_nc_cat=108&_nc_sid=7aed08&_nc_ohc=WzV_TY9q-IkAX9kpBDz&_nc_ht=scontent.fvca1-1.fna&oh=f37b5964618d1a60d2e20d9d0d60e574&oe=5F2EE3F3" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <h5 class="mb-0">Nguyễn Văn Phát</h5><span class="small text-uppercase text-muted">Thành viên - Frontend Developer</span>
             <ul class="social mb-0 list-inline mt-3">
-              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
-              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
-              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
-              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.facebook.com/phattom87" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
             </ul>
           </div>
         </div>
         <!-- End-->
-        <p>Đã sửa about us</p>
       </div>
     </div>
   </div>

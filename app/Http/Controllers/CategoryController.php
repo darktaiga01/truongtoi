@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Category;
+use App\Post;
+
 class CategoryController extends Controller
 {
     /**
@@ -119,4 +121,19 @@ class CategoryController extends Controller
 
         return redirect()->route('category.index')->withSuccess('You have successfully deleted a Category!');
 }   
+
+    public function news()
+    {
+        $tuyensinh=Post::where('category_id', 9)->get(); 
+        $other=Post::where('category_id', 11)->get(); 
+        return view('news', compact('tuyensinh','other'));
+    }
+
+    public function discus()
+    {
+        $posts=Post::where('category_id', 12)->get(); 
+        return view('discuss', compact('posts'));
+    }
+
+    
 }

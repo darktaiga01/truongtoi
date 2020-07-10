@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Trường tôi</title>
+  <title> @yield('title')</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -60,11 +60,12 @@
               aria-haspopup="true" aria-expanded="false">
               Giới thiệu
           </a>
-            <?php $cats=DB::table('majors')->get(); ?>
-            
+            <?php $majors=DB::table('categories')->where('parent_id', 5)->get(); ?>
+      
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="{{ route('reviewshool') }}">Giới thiệu trường</a>
-              <a class="dropdown-item" href="#">Giới thiệu ngành</a>
+              @foreach($majors as $major)
+              <a class="dropdown-item" href="{{ url('category',$major->id) }}  ">{{ $major->name }}</a>
+              @endforeach
               <!--<div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">Something else here</a>-->
             </div>
@@ -93,11 +94,11 @@
           @else
               <li class="nav-item dropdown">
                   <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                      {{ Auth::user()->name }} <span class="caret"></span>
+                    <img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width:32px; height:32px; top:10px; left:10px; border-radius:50%; margin-right: 10px;">{{ Auth::user()->name }} <span class="caret"></span>
                   </a>
 
                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ route('user.dashboard') }}">Bảng điều khiển</a>
+                    <a class="dropdown-item" href="profile/{{Auth::user()->id}}">Bảng điều khiển</a>
 
                       <a class="dropdown-item" href="{{ route('logout') }}"
                          onclick="event.preventDefault();
