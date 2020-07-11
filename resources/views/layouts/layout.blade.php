@@ -93,6 +93,29 @@
           <li class="nav-item">
             <a class="nav-link" href='{{ route('aboutus') }}'>Về chúng tôi</a>
           </li>
+          <li class="nav-item abc">
+            <a href="#">Giới thiệu</a>
+            <ul>
+                <li><a href="#">About sub 1</a></li>
+                <li><a href="#">About sub 2</a>
+                    <ul>
+                        <li><a href="#">About sub 2-1</a></li>
+                        <li><a href="#">About sub 2-2</a></li>
+                        <li><a href="#">About sub 2-3</a>
+                            <ul>
+                                <li><a href="#">About sub 2-3-1</a></li>
+                                <li><a href="#">About sub 2-3-2</a></li>
+                                <li><a href="#">About sub 2-3-3</a></li>
+                                <li><a href="#">About sub 2-3-4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">About sub 2-4</a></li>
+                    </ul>
+                    </li>
+                <li><a href="#">About sub 3</a></li>
+                <li><a href="#">About sub 4</a></li>
+            </ul>
+          </li>
         </ul>
         <ul class="navbar-nav ml-auto">
           <!-- Authentication Links -->
@@ -224,7 +247,15 @@ $(function () {
     $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
   });
 });
-
+<script>
+   $(document).ready(function(){
+      $('.dropdown-submenu a.test').on("click", function(e){
+         $(this).next('ul').toggle();
+         e.stopPropagation();
+         e.preventDefault();
+         });
+      });
+</script>
 </script>
     <!-- Main jQuery -->
         <script src="plugins/jquery/jquery.min.js"></script>
