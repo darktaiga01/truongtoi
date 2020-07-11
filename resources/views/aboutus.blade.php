@@ -1,23 +1,24 @@
 @extends('layouts.layout')
-
+@section('title','TruongToi - Về chúng tôi')
+    
 @section('content')
 <header class="masthead text-white text-center" style="background:url('../images/aboutus.jpeg') no-repeat center center; margin-top: 76px;">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-xl-9 mx-auto">
-          <h2 class="my-3">GẶP GỠ CHÚNG TÔI</h2>
+          <h1 class="banner-title text-light">GẶP GỠ CHÚNG TÔI</h1>
           <p class="mb-3">Chúng tôi là sinh viên trường Đại Học Công Nghệ Thông Tin - Đại Học Quốc Gia Thành Phố Hồ Chí Minh. Với kinh nghiệm của mình, chúng tôi hiểu những điều bạn cần, và sẽ giúp bạn đạt tới ước mơ.</p>
         </div>
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-            <button type="button" class="btn btn-outline-light btn-lg">Liên hệ</button>
+            <a href="#contact"><button type="button" class="btn btn-outline-light btn-lg">Liên hệ</button></a>
 
         </div>
       </div>
     </div>
   </header>
 
-  <div class="bg-light py-5">
+  <div class="py-5">
     <div class="container py-5">
       <div class="row mb-4">
         <div class="col-lg-5">
@@ -74,5 +75,92 @@
       </div>
     </div>
   </div>
+  <div class="bg-light py-5" id="contact">
+    <div class="container">
+      <h2 class="my-5">LIÊN HỆ CHÚNG TÔI</h2>
+      @if(count($errors) > 0)
+        <div class="alert alert-danger">
+          <ul>
+            @foreach($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+          </ul>
+        </div>
+        @endif
+
+        @if($message = Session::get('success'))
+        <div class="alert alert-success">
+          <ul>
+            <strong>{{ $message }}</strong>
+          </ul>
+        </div>
+        @endif
+      <div class="row">
+        <div class="col-md-7 mb-5">
+
+         
+          <form action="{{ route('send') }}" method="POST" class="p-5 bg-white">
+            @csrf
+            
+
+            <div class="row form-group">
+              
+              <div class="col-md-12">
+                <label class="text-black" for="name">Bạn là: </label> 
+                <input type="text" id="name" name="name" class="form-control">
+              </div>
+            </div>
+
+            <div class="row form-group">
+              
+              <div class="col-md-12">
+                <label class="text-black" for="email">Email</label> 
+                <input type="email" id="email" name="email" class="form-control">
+              </div>
+            </div>
+
+            <div class="row form-group">
+              
+              <div class="col-md-12">
+                <label class="text-black" for="subject">Tiêu đề</label> 
+                <input type="text" id="subject" name="subject" class="form-control">
+              </div>
+            </div>
+
+            <div class="row form-group">
+              <div class="col-md-12">
+                <label class="text-black" for="message">Nội dung</label> 
+                <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Viết câu hỏi, vấn đề bạn muốn trao đổi với chúng tôi"></textarea>
+              </div>
+            </div>
+
+            <div class="row form-group">
+              <div class="col-md-12">
+                <input type="submit" value="Gửi" class="btn btn-primary py-2 px-4 text-white">
+              </div>
+            </div>
+
+
+          </form>
+        </div>
+        <div class="col-md-5">
+          
+          <div class="p-4 mb-3 bg-white">
+
+            <p class="mb-0 font-weight-bold">SĐT</p>
+            <p class="mb-4"><a href="#">0977079241</a></p>
+
+            <p class="mb-0 font-weight-bold">Email: </p>
+            <p class="mb-0"><a href="#">dangngoctan2012@gmail.com</a></p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+ 
   
 @endsection

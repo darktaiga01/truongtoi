@@ -2,16 +2,16 @@
 <html>
 
 <head>
-  <title>Trường tôi</title>
+  <title>@yield('title')</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <!-- Icofont Css -->
-        <link rel="stylesheet" href="../plugins/fontawesome/css/all.css">
+        <link rel="stylesheet" href="{{ asset('plugins/fontawesome/css/all.css') }}">
         <!-- animate.css -->
-        <link rel="stylesheet" href="../plugins/animate-css/animate.css">
+        <link rel="stylesheet" href="{{ asset('../plugins/animate-css/animate.css') }}">
         <!-- Icofont -->
-        <link rel="stylesheet" href="../plugins/icofont/icofont.css">
+        <link rel="stylesheet" href="{{ asset('../plugins/icofont/icofont.css') }}">
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('css/styleNT.css') }}">
 
@@ -46,43 +46,32 @@
       </button>
        <div class="collapse navbar-collapse" id="navbarSupportedContent menu">
         <ul class="navbar-nav mr-auto">
-          <!--<li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Danh sách trường
-          </a>
-            <?php $cats=DB::table('majors')->get(); ?>
-            
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              @foreach($cats as $cat)
-              <a class="dropdown-item" href="{{ url('major',$cat->id) }}  ">{{ $cat->name }}</a>
-              @endforeach-->
-              <!--<div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>-->
-           <!-- </div>
-          </li>-->
+
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
-              Giới thiệu
+              Trường
           </a>
             <?php $cats=DB::table('majors')->get(); ?>
-            
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="{{ route('reviewshool') }}">Giới thiệu trường</a>
-              <div class="dropdown-submenu">
-              <a class="dropdown-item" href="#">Giới thiệu ngành</a>
-              <?php $cats=DB::table('majors')->get(); ?>
             
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               @foreach($cats as $cat)
               <a class="dropdown-item" href="{{ url('major',$cat->id) }}  ">{{ $cat->name }}</a>
               @endforeach
-              <!--<div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>-->
             </div>
-           </div>
-          </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Ngành
+          </a>
+          <?php $majors=DB::table('categories')->where('parent_id', 5)->get(); ?>
+            
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              @foreach($majors as $major)
+              <a class="dropdown-item" href="{{ url('category',$major->id) }}  ">{{ $major->name }}</a>
+              @endforeach
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ route('news') }}">Tin tức</a>
@@ -107,12 +96,13 @@
               @endif
           @else
               <li class="nav-item dropdown">
+
                   <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                      {{ Auth::user()->name }} <span class="caret"></span>
+                      <img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width:32px; height:32px;   margin-right: 10px; border-radius:50%"> {{ Auth::user()->name }} <span class="caret"></span>
                   </a>
 
                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ route('user.dashboard') }}">Bảng điều khiển</a>
+                    <a class="dropdown-item" href="/profile/{{Auth::user()->id }}">Bảng điều khiển</a>
 
                       <a class="dropdown-item" href="{{ route('logout') }}"
                          onclick="event.preventDefault();
@@ -169,23 +159,17 @@
       <div class="container">
         <div class="row mb-5">
           <div class="col-md-4">
-            <h3 class="footer-heading mb-4">About Us</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat reprehenderit magnam deleniti quasi saepe, consequatur atque sequi delectus dolore veritatis obcaecati quae, repellat eveniet omnis, voluptatem in. Soluta, eligendi, architecto.</p>
+            <h3 class="footer-heading mb-4">TruongTui</h3>
+            <p>TruongTui là trang web tra cứu thông tin trường ĐH uy tín chính xác và kịp thời nhất.</p>
           </div>
           <div class="col-md-3 ml-auto">
-            <!-- <h3 class="footer-heading mb-4">Navigation</h3> -->
             <ul class="list-unstyled float-left mr-5">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Advertise</a></li>
-              <li><a href="#">Careers</a></li>
+              <li><a href="/aboutus">Về chúng tôi</a></li>
+              <li><a href="/news">Tin tức</a></li>
+              <li><a href="/discuss">Thảo luận</a></li>
               <li><a href="#">Subscribes</a></li>
             </ul>
-            <ul class="list-unstyled float-left">
-              <li><a href="#">Travel</a></li>
-              <li><a href="#">Lifestyle</a></li>
-              <li><a href="#">Sports</a></li>
-              <li><a href="#">Nature</a></li>
-            </ul>
+            
           </div>
           <div class="col-md-4">
             
@@ -193,11 +177,8 @@
             <div>
               <h3 class="footer-heading mb-4">Connect With Us</h3>
               <p>
-                <a href="#"><span class="icon-facebook pt-2 pr-2 pb-2 pl-0"></span></a>
-                <a href="#"><span class="icon-twitter p-2"></span></a>
-                <a href="#"><span class="icon-instagram p-2"></span></a>
-                <a href="#"><span class="icon-rss p-2"></span></a>
-                <a href="#"><span class="icon-envelope p-2"></span></a>
+                <a href="https://www.facebook.com/linkylist"><i class="fa fa-facebook-official fa-3x" aria-hidden="true"></i>
+</a> 
               </p>
             </div>
           </div>
@@ -227,23 +208,23 @@ $(function () {
 
 </script>
     <!-- Main jQuery -->
-        <script src="plugins/jquery/jquery.min.js"></script>
+        <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
         <!-- Bootstrap 4.3.1 -->
-        <script src="plugins/bootstrap/js/popper.min.js"></script>
-        <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script src="{{ asset('plugins/bootstrap/js/popper.min.js') }}"></script>
+        <script src="{{ asset('plugins/bootstrap/js/bootstrap.min.js') }}"></script>
         <!-- Woow animtaion -->
-        <script src="plugins/counterup/wow.min.js"></script>
-        <script src="plugins/counterup/jquery.easing.1.3.js"></script>
+        <script src="{{ asset('plugins/counterup/wow.min.js') }}"></script>
+        <script src="{{ asset('plugins/counterup/jquery.easing.1.3.js') }}"></script>
         <!-- Counterup -->
-        <script src="plugins/counterup/jquery.waypoints.js"></script>
-        <script src="plugins/counterup/jquery.counterup.min.js"></script>
+        <script src="{{ asset('plugins/counterup/jquery.waypoints.js') }}"></script>
+        <script src="{{ asset('plugins/counterup/jquery.counterup.min.js') }}"></script>
 
         <!-- Google Map -->
-        <script src="plugins/google-map/gmap3.min.js"></script>
+        <script src="{{ asset('plugins/google-map/gmap3.min.js') }}"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>   
         <!-- Contact Form -->
-        <script src="plugins/jquery/contact.js"></script>
-        <script src="js/custom.js"></script>
+        <script src="{{ asset('plugins/jquery/contact.js') }}"></script>
+        <script src="{{ asset('js/custom.js') }}"></script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

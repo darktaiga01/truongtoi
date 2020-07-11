@@ -1,5 +1,7 @@
 @extends('layouts.layout')
-
+@section('title')
+    TruongToi - {{ $university->title }}
+@endsection
 @section('content')
    
     <header class="masthead" style="background-image: url('{{ $university->feature_img }}')">

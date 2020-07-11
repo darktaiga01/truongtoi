@@ -5,7 +5,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 text-light">
-        <h2>Thảo luận</h2>
+        <h2 class="text-light">Thảo luận</h2>
         <p>Nơi thảo luận mọi vấn đề như học tập, cuộc sống. Người dùng gửi chủ đề thông qua web, chúng tôi sẽ sàng lọc và đăng lên.</p>
       </div>
     </div>
@@ -55,7 +55,7 @@
     <div class="col-lg-5 col-xl-4 mb-4">
         <!--Featured image-->
         <div class="view overlay rounded z-depth-1">
-            <img src="{{ $post->feature_img}}" class="img-fluid" alt="">
+            <img src="{{ $post->feature_img}}" class="img-fluid" alt="" style="width: 380px; height: 200px;">
             <a href="post/{{ $post->id }}" target="_blank">
                 <div class="mask rgba-white-slight"></div>
             </a>

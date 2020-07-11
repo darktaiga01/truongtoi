@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Quản lý chuyên mục')
 
 @section('content_header')
-    <h1>Tạo bài mới</h1>
+    <h1>Quản lý chuyên mục</h1>
     <hr>
 @stop
 @section('content')

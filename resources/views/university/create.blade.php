@@ -1,7 +1,7 @@
 {{-- @extends('layouts.layout') --}}
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Thêm trường')
 
 @section('content_header')
     <h1>Tạo bài mới</h1>

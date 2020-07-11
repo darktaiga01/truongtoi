@@ -242,7 +242,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: "Asap", sans-serif;
+  /* font-family: "Asap", sans-serif; */
   font-weight: 600;
   margin-bottom: 0px;
   color: #232323;

@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Chỉnh sửa thông tin trường')
 
 @section('content_header')
     <h1>Chỉnh sửa bài viết</h1>

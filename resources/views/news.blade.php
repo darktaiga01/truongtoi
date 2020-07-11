@@ -1,5 +1,5 @@
 @extends('layouts.layout')
-
+@section('title','TruongTui - Tin tức, tuyển sinh')
 @section('content')
 <div class="container" style="margin-top: 76px;">
 	<div id="myCarousel" class="carousel slide">

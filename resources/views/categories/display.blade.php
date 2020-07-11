@@ -1,25 +1,19 @@
 @extends('layouts.layout')
 
-@section('title', 'Giới thiệu chi tiết ngành')
+@section('title')
+@foreach($categories as $category)
+TruongTui - Thông tin về nhóm ngành {{ $category->name }}
+@endforeach
+@endsection
 @section('content')
 
 <div class="py-5 bg-dark">
-    <div class="container">
+    <div class="container" style="margin-top: 60px;">
       <div class="row">
         <div class="col-md-6 text-light">
           <span>Nhóm ngành</span>
           @foreach($categories as $category)
-          <h3>{{ $category->name }}</h3>
-          @switch($category->id)
-              @case(1)
-              <p>Khoa học kỹ thuật là các ngành khoa học liên quan tới việc phát triển kỹ thuật và thiết kế các sản phẩm trong đó có ứng dụng các kiến thức khoa học tự nhiên.</p>
-                  @break
-              @case(2)
-                  
-                  @break
-              @default
-                  
-          @endswitch
+          <h3 class="text-light">{{ $category->name }}</h3>
           @endforeach
         </div>
       </div>

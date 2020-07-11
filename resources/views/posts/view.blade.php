@@ -1,5 +1,7 @@
 @extends('layouts.layout')
-
+@section('title')
+    TruongToi - {{ $post->title }}
+@endsection
 @section('content')
    
     <header class="masthead" style="background-image: url('{{ $post->feature_img }}')">

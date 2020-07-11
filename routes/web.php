@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SendEmailController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,9 +18,8 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/aboutus', function () {
-    return view('aboutus');
-})->name('aboutus');
+Route::get('/aboutus', 'SendEmailController@index')->name('aboutus');
+Route::post('/aboutus/send', 'SendEmailController@send')->name('send');
 
 Route::get('/reviewshool', function () {
     return view('reviewshool');
@@ -54,7 +54,7 @@ Route::get('/university/{university}', 'UniversityController@show')->name('unive
 Route::resource('admin/university', 'UniversityController')->except('show');
 
 Route::get('search', 'SearchController@search')->name('search');
-Route::get('advancedSearch','SearchController@advancedSearch')->name('advancedSearch');
+// Route::get('advancedSearch','SearchController@advancedSearch')->name('advancedSearch');
 Route::resource('admin/category', 'CategoryController');
 
 

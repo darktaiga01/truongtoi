@@ -26,7 +26,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $posts = Post::orderBy('created_at', 'desc')->take(6)->get();
+        return view('index', compact('posts'));
     }
 
     public function showMajorList($id)
