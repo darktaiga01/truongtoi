@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('content')
-<div class="container">
+<div class="container" style="margin-top: 76px;">
   <br>
   <div class="card-columns">
     <div class="card bg-light">

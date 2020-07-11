@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="jumbotron"
-		style="background: url({{ asset('images/1.jpg') }}) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+		style="background: url({{ asset('images/1.jpg') }}) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; margin-top: 76px;">
 		<h1 class="display-3" style="text-align: center; margin-bottom: 10px">Kết quả tra cứu </h1>
 	</div>
 

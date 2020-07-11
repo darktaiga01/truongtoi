@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('content')
-<header class="masthead text-white text-center" style="background:url('../images/aboutus.jpeg') no-repeat center center;">
+<header class="masthead text-white text-center" style="background:url('../images/aboutus.jpeg') no-repeat center center; margin-top: 76px;">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">

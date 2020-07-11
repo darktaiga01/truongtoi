@@ -11,7 +11,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script> --}}
 
-    <div class="div-member-info">
+    <div class="div-member-info" style="margin-top: 76px;">
         <h1 class="display-3"
             style="text-align: center; margin-bottom: 10px; color:azure; text-shadow: 2px 2px 4px #000000;">
             <strong>THÔNG TIN THÀNH VIÊN</strong>

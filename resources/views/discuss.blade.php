@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('content')
-<div class="py-5 bg-secondary">
+<div class="py-5 bg-secondary" style="margin-top: 76px;">
   <div class="container">
     <div class="row">
       <div class="col-md-6 text-light">

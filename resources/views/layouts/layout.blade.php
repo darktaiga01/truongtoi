@@ -2,10 +2,16 @@
 <html>
 
 <head>
-  <title> @yield('title')</title>
+  <title>Trường tôi</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <!-- Icofont Css -->
+        <link rel="stylesheet" href="../plugins/fontawesome/css/all.css">
+        <!-- animate.css -->
+        <link rel="stylesheet" href="../plugins/animate-css/animate.css">
+        <!-- Icofont -->
+        <link rel="stylesheet" href="../plugins/icofont/icofont.css">
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('css/styleNT.css') }}">
 
@@ -31,16 +37,16 @@
 </head>
 
 <body class="text-body">
-  <nav class="navbar navbar-expand-lg navbar-light static-top" style="background-color: #038C65;">
+  <nav class="navbar navbar-expand-lg fixed-top trans-navigation" style="background-color: #038C65;">
     <div class="container">
-      <a class="navbar-brand" href="{{ route('home')}}">Trường tôi</a>
+      <a class="navbar-brand" href="{{ route('home')}}"><img src="../images/logo.png" style="height: 50px"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
        <div class="collapse navbar-collapse" id="navbarSupportedContent menu">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item dropdown">
+          <!--<li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
               Danh sách trường
@@ -50,25 +56,33 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               @foreach($cats as $cat)
               <a class="dropdown-item" href="{{ url('major',$cat->id) }}  ">{{ $cat->name }}</a>
-              @endforeach
+              @endforeach-->
               <!--<div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">Something else here</a>-->
-            </div>
-          </li>
+           <!-- </div>
+          </li>-->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
               Giới thiệu
           </a>
-            <?php $majors=DB::table('categories')->where('parent_id', 5)->get(); ?>
-      
+            <?php $cats=DB::table('majors')->get(); ?>
+            
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              @foreach($majors as $major)
-              <a class="dropdown-item" href="{{ url('category',$major->id) }}  ">{{ $major->name }}</a>
+              <a class="dropdown-item" href="{{ route('reviewshool') }}">Giới thiệu trường</a>
+              <div class="dropdown-submenu">
+              <a class="dropdown-item" href="#">Giới thiệu ngành</a>
+              <?php $cats=DB::table('majors')->get(); ?>
+            
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              @foreach($cats as $cat)
+              <a class="dropdown-item" href="{{ url('major',$cat->id) }}  ">{{ $cat->name }}</a>
               @endforeach
               <!--<div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">Something else here</a>-->
             </div>
+           </div>
+          </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ route('news') }}">Tin tức</a>
@@ -94,11 +108,11 @@
           @else
               <li class="nav-item dropdown">
                   <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                    <img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width:32px; height:32px; top:10px; left:10px; border-radius:50%; margin-right: 10px;">{{ Auth::user()->name }} <span class="caret"></span>
+                      {{ Auth::user()->name }} <span class="caret"></span>
                   </a>
 
                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="profile/{{Auth::user()->id}}">Bảng điều khiển</a>
+                    <a class="dropdown-item" href="{{ route('user.dashboard') }}">Bảng điều khiển</a>
 
                       <a class="dropdown-item" href="{{ route('logout') }}"
                          onclick="event.preventDefault();
@@ -199,11 +213,37 @@
         </div>
       </div>
     </div>
+    
     <script>
 $(document).ready(function(){
   $(".dropdown-toggle").dropdown();
 });
+$(function () {
+  $(document).scroll(function () {
+    var $nav = $(".navbar.fixed-top");
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  });
+});
+
 </script>
+    <!-- Main jQuery -->
+        <script src="plugins/jquery/jquery.min.js"></script>
+        <!-- Bootstrap 4.3.1 -->
+        <script src="plugins/bootstrap/js/popper.min.js"></script>
+        <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+        <!-- Woow animtaion -->
+        <script src="plugins/counterup/wow.min.js"></script>
+        <script src="plugins/counterup/jquery.easing.1.3.js"></script>
+        <!-- Counterup -->
+        <script src="plugins/counterup/jquery.waypoints.js"></script>
+        <script src="plugins/counterup/jquery.counterup.min.js"></script>
+
+        <!-- Google Map -->
+        <script src="plugins/google-map/gmap3.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>   
+        <!-- Contact Form -->
+        <script src="plugins/jquery/contact.js"></script>
+        <script src="js/custom.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -211,6 +251,7 @@ $(document).ready(function(){
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
       integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
       crossorigin="anonymous"></script>
+
 </body>
 
 </html>
