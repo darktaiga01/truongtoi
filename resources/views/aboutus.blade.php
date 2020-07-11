@@ -148,10 +148,10 @@
           <div class="p-4 mb-3 bg-white">
 
             <p class="mb-0 font-weight-bold">SĐT</p>
-            <p class="mb-4"><a href="#">0977079241</a></p>
+            <p class="mb-4">0977079241</p>
 
             <p class="mb-0 font-weight-bold">Email: </p>
-            <p class="mb-0"><a href="#">dangngoctan2012@gmail.com</a></p>
+            <p class="mb-0">dangngoctan2012@gmail.com</p>
 
           </div>
 

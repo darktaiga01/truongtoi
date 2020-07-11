@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 11, 2020 at 02:38 AM
+-- Generation Time: Jul 11, 2020 at 01:38 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.7
 
@@ -76,21 +76,6 @@ INSERT INTO `categories` (`id`, `parent_id`, `name`, `created_at`, `updated_at`)
 (14, 5, 'Chính trị - Quân sự', '2020-07-10 08:37:07', '2020-07-10 08:37:07'),
 (15, 5, 'Năng khiếu', '2020-07-10 08:37:14', '2020-07-10 08:37:14'),
 (16, 5, 'Y tế - Sức khoẻ', '2020-07-10 08:37:23', '2020-07-10 08:37:23');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `comments`
---
-
-CREATE TABLE `comments` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `comment` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -226,21 +211,6 @@ INSERT INTO `posts` (`id`, `title`, `body`, `feature_img`, `created_at`, `update
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ratings`
---
-
-CREATE TABLE `ratings` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `post_id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `rating` double NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `universities`
 --
 
@@ -287,7 +257,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `avatar`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Dang Ngoc Tan', 'dangngoctan2012@gmail.com', NULL, '$2y$10$CXU2w/raHFNcOnvxMIjmiu55DMphDbxPlCalvT4WRsHzd8Wiu14j6', '1594380828.jpg', NULL, '2020-07-10 04:10:14', '2020-07-10 04:33:48');
+(1, 'Dang Ngoc Tan', 'dangngoctan2012@gmail.com', NULL, '$2y$10$k/aBrXUa.NreQmpCXXPdSudpCDQ9ZTpe2inKSLSsGL3j4ykU5w7tq', '1594380828.jpg', 'MciFRJQBt5xhEoiXKD8RJK3fYKez5Fw0BhaNzCBoNNwEAfnMCgKVF4aWpHT6', '2020-07-10 04:10:14', '2020-07-10 23:21:35');
 
 --
 -- Indexes for dumped tables
@@ -304,12 +274,6 @@ ALTER TABLE `admins`
 -- Indexes for table `categories`
 --
 ALTER TABLE `categories`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `comments`
---
-ALTER TABLE `comments`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -349,12 +313,6 @@ ALTER TABLE `posts`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `ratings`
---
-ALTER TABLE `ratings`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `universities`
 --
 ALTER TABLE `universities`
@@ -382,12 +340,6 @@ ALTER TABLE `admins`
 --
 ALTER TABLE `categories`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
-
---
--- AUTO_INCREMENT for table `comments`
---
-ALTER TABLE `comments`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -418,12 +370,6 @@ ALTER TABLE `migrations`
 --
 ALTER TABLE `posts`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `ratings`
---
-ALTER TABLE `ratings`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `universities`
