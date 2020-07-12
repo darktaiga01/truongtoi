@@ -1,5 +1,5 @@
 <h2>Project for "Phát triển ứng dụng web" - "UIT - VNUHCM"</h2>
-<p>Live Demo: https://koroko.dev/truongtui </p>
+<p>Live Demo: https://koroko.dev </p>
 <div>
 <h3>Thành viên tham gia</h3>
 <hr>
