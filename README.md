@@ -28,7 +28,7 @@ Gõ câu lệnh sau: <code>npm install</code> và chờ các gói được cài 
 <h5>Bước 4: Tạo key</h5>
 Gõ câu lệnh sau <code>php artisan key:generate</code>
 <h5>Bước 5: Tạo database</h5>
-Bạn có thể tự tạo db, sau đó dùng <code>php artisan migrate</code> để laravel đồng bộ với db và tạo sẵn table, tuy nhiên trong file mình up có sẵn db có sẵn dữ liệu, và web được code theo db đó nên để không phát sinh lỗi, khuyến nghị nên import file sql trên
+Gõ <code>php artisan migrate</code> để laravel đồng bộ với db và tạo sẵn table
 <h5>Bước 6: Chạy</h5>
 Trước khi chạy, cần phải mở WAMP, XAMP hoặc gì đó để bật Apache server, sau đó gõ <code>php artisan serve</code>. Web sẽ nằm trên localhost:8000.
     </div>
